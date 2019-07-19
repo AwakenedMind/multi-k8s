@@ -18,7 +18,7 @@ before_install:
   - docker build -t awakenedmind/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run awakenedmind/react-test npm test
+  - docker run awakenedmind/react-test npm test -- --coverage
 
 # Custom K8s deployment
 deploy: 
